@@ -22,11 +22,11 @@ export default function RevenueChartBox() {
   ];
 
   return (
-    <div className="w-full relative rotate-[-9deg] translate-x-11 -translate-y-9 z-10 bg-white rounded-[25px] flex flex-col items-start p-10 gap-9 shadow-[0_5px_15px_rgba(0,0,0,0.19)]">
+    <div className="w-full relative md:rotate-[-9deg] md:translate-x-11 md:-translate-y-9 z-10 bg-white rounded-[25px] flex flex-col items-start md:p-10 p-6 gap-9 shadow-[0_5px_15px_rgba(0,0,0,0.19)]">
       <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
         Revenue Generated
       </span>
-      <div className="w-full flex items-center relative">
+      <div className="w-full flex md:flex-row flex-col items-center relative">
         <div className="flex flex-col items-start gap-8 pr-5">
           {data.map((item, index) => (
             <div key={index} className="flex items-start gap-2">

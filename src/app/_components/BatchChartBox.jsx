@@ -18,8 +18,8 @@ export default function BatchChartBox() {
   ];
 
   return (
-    <div className="w-full bg-white rounded-[25px] flex flex-col items-center p-10 gap-8 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
-      <div className="w-full flex items-center justify-between">
+    <div className="w-full bg-white rounded-[25px] flex flex-col items-center md:p-10 p-6 gap-8 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
+      <div className="w-full flex md:flex-row flex-col md:items-center items-start md:gap-0 gap-1.5 md:justify-between justify-normal">
         <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
           Batch Performance
         </span>
@@ -27,7 +27,7 @@ export default function BatchChartBox() {
           All information in percentage(%)
         </span>
       </div>
-      <div className="w-full flex items-center">
+      <div className="w-full flex md:flex-row flex-col items-center">
         <div className="flex flex-col items-start gap-12 pr-5">
           {data.map((item, index) => (
             <div key={index} className="flex items-start gap-2">

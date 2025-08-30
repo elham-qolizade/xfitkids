@@ -34,8 +34,8 @@ export default function PerformerBox() {
   ];
 
   return (
-    <div className="w-full bg-white rounded-[25px] flex flex-col items-start p-10 gap-9 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
-      <div className="w-full flex items-center justify-between">
+    <div className="w-full bg-white rounded-[25px] flex flex-col items-start md:p-10 p-6 gap-9 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
+      <div className="w-full flex md:flex-row flex-col md:gap-0 gap-1.5 items-center justify-between">
         <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
           Top Performer
         </span>
@@ -48,7 +48,7 @@ export default function PerformerBox() {
           <option value="">empty :(</option>
         </select>
       </div>
-      <div className="w-full grid grid-cols-3 gap-5">
+      <div className="w-full grid md:grid-cols-3 grid-cols-1 gap-5">
         {data.map((item, index) => (
           <div
             key={index}

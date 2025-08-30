@@ -44,7 +44,7 @@ export default function CounterBox() {
 
   return (
     <motion.div
-      className="w-full grid grid-cols-3 gap-8"
+      className="w-full grid md:grid-cols-3 grid-cols-1 md:gap-8 gap-3.5"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

@@ -21,11 +21,11 @@ export default function StatusBox() {
   ];
 
   return (
-    <div className="w-full bg-white flex flex-col items-start rounded-[25px] p-10 gap-8 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
+    <div className="w-full bg-white flex flex-col items-start rounded-[25px] md:p-10 p-6 gap-8 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
       <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
         Today’s Status
       </span>
-      <div className="w-full grid grid-cols-3 gap-7">
+      <div className="w-full grid md:grid-cols-3 grid-cols-1 md:gap-7 gap-3.5">
         {data.map((item, index) => (
           <div
             key={index}
@@ -54,8 +54,8 @@ export default function StatusBox() {
           </div>
         ))}
       </div>
-      <div className="w-full flex items-center justify-evenly bg-[#F9F9F9] rounded-[9px] relative overflow-hidden py-6">
-        <div className="w-[20px] h-full absolute left-0 top-0 bottom-0 bg-[#F1554C]"></div>
+      <div className="w-full flex md:flex-row flex-col items-center md:justify-evenly justify-normal bg-[#F9F9F9] md:gap-0 gap-2.5 rounded-[9px] relative overflow-hidden py-6">
+        <div className="md:w-[20px] w-full md:h-full h-[20px] absolute left-0 top-0 md:bottom-0 bg-[#F1554C]"></div>
         <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
           Today’s WOD
         </span>

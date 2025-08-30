@@ -36,7 +36,7 @@ export default function SideMenu() {
   const activeIndex = links.findIndex((l) => l.href === pathname);
 
   return (
-    <div className="w-[250px] h-full sticky left-0 top-0 bg-[#0F296D] flex flex-col items-center gap-6 pl-8">
+    <div className="w-[250px] h-full sticky left-0 top-0 bg-[#0F296D] md:flex hidden flex-col items-center gap-6 pl-8">
       <div className="w-full flex items-end justify-center gap-2">
         <Image src={Logo} alt="Logo" width={40} height={40} className="mt-5" />
         <h2 className="font-extrabold PoppinsExtra text-[#F3F5FB]">
