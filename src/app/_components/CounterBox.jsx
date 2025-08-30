@@ -5,6 +5,7 @@ import CounterKidsIcon from "@/assets/icons/CounterKidsIcon";
 import CounterRevenueIcon from "@/assets/icons/CounterRevenueIcon";
 import React from "react";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 export default function CounterBox() {
   const data = [
@@ -27,11 +28,31 @@ export default function CounterBox() {
     },
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
   return (
-    <div className="w-full grid grid-cols-3 gap-8">
+    <motion.div
+      className="w-full grid grid-cols-3 gap-8"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {data.map((item, index) => (
-        <div
+        <motion.div
           key={index}
+          variants={itemVariants}
           className="w-full flex items-center justify-evenly bg-white rounded-[25px] py-7 shadow-[0_5px_15px_rgba(0,0,0,0.04)]"
         >
           <div className="flex items-center justify-center bg-gradient-to-bl from-[#375DBE] to-[#102A6D] rounded-[20px] px-3.5 shadow-[0_5px_15px_rgba(0,0,0,0.19)]">
@@ -60,8 +81,8 @@ export default function CounterBox() {
               {item.label}
             </span>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
