@@ -36,7 +36,7 @@ export default function PerformerBox() {
   return (
     <div className="w-full bg-white rounded-[25px] flex flex-col items-start p-10 gap-9 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
       <div className="w-full flex items-center justify-between">
-        <span className="text-[17px] font-semibold text-[#393D54]">
+        <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
           Top Performer
         </span>
         <select

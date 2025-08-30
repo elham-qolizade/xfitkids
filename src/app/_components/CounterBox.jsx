@@ -60,7 +60,7 @@ export default function CounterBox() {
           </div>
           <span className="w-[1.5px] h-20 bg-[#E5E5E5] rounded-full"></span>
           <div className="flex flex-col items-start gap-1">
-            <span className="text-3xl font-extrabold text-black">
+            <span className="text-3xl PoppinsExtra font-extrabold text-black">
               <CountUp
                 start={0}
                 end={item.count}
@@ -77,7 +77,7 @@ export default function CounterBox() {
                 }}
               />
             </span>
-            <span className="text-sm font-semibold text-[#00000066]">
+            <span className="text-sm PoppinsBold font-semibold text-[#00000066]">
               {item.label}
             </span>
           </div>

@@ -8,7 +8,7 @@ import userProfile from "../../../public/profile.png";
 export default function Header() {
   return (
     <div className="w-full flex items-center justify-between bg-white rounded-b-[20px] px-6 py-4 shadow-[0_5px_15px_rgba(0,0,0,0.04)]">
-      <h2 className="text-[17px] font-bold text-[#0F296D]">
+      <h2 className="text-[17px] PoppinsBold font-bold text-[#0F296D]">
         Welcome to xfitkids
       </h2>
       <div className="flex items-center gap-10">

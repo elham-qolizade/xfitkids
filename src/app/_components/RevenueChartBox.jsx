@@ -23,7 +23,7 @@ export default function RevenueChartBox() {
 
   return (
     <div className="w-full relative rotate-[-9deg] translate-x-11 -translate-y-9 z-10 bg-white rounded-[25px] flex flex-col items-start p-10 gap-9 shadow-[0_5px_15px_rgba(0,0,0,0.19)]">
-      <span className="text-[17px] font-semibold text-[#393D54]">
+      <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
         Revenue Generated
       </span>
       <div className="w-full flex items-center relative">
@@ -46,7 +46,7 @@ export default function RevenueChartBox() {
           ))}
         </div>
         <div className="absolute bottom-2.5 left-28 z-10 py-3 px-4 gap-1 bg-white rounded-[7px] flex flex-col items-start shadow-[0_5px_15px_rgba(0,0,0,0.24)]">
-          <span className="text-[20px] font-extrabold text-[#0F296D]">25M</span>
+          <span className="text-[20px] PoppinsExtra font-extrabold text-[#0F296D]">25M</span>
           <span className="text-[10px] font-semibold text-[#393D54]">
             Offline
           </span>

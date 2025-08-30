@@ -39,7 +39,9 @@ export default function SideMenu() {
     <div className="w-[250px] h-full sticky left-0 top-0 bg-[#0F296D] flex flex-col items-center gap-6 pl-8">
       <div className="w-full flex items-end justify-center gap-2">
         <Image src={Logo} alt="Logo" width={40} height={40} className="mt-5" />
-        <h2 className="font-extrabold text-[#F3F5FB]">XFIT KIDS</h2>
+        <h2 className="font-extrabold PoppinsExtra text-[#F3F5FB]">
+          XFIT KIDS
+        </h2>
       </div>
       <div className="w-full flex flex-col items-start bg-[#F3F5FB] relative">
         <div
@@ -66,7 +68,9 @@ export default function SideMenu() {
               `}
             >
               <Icon color={isActive ? "#0F296D" : "#FFFFFF"} size={20} />
-              <span className="text-[15px] font-bold">{link.label}</span>
+              <span className="text-[15px] PoppinsBold font-bold">
+                {link.label}
+              </span>
             </Link>
           );
         })}

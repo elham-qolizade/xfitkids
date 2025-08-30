@@ -20,7 +20,7 @@ export default function BatchChartBox() {
   return (
     <div className="w-full bg-white rounded-[25px] flex flex-col items-center p-10 gap-8 shadow-[0_5px_15px_rgba(0,0,0,0.14)]">
       <div className="w-full flex items-center justify-between">
-        <span className="text-[17px] font-semibold text-[#393D54]">
+        <span className="text-[17px] PoppinsBold font-semibold text-[#393D54]">
           Batch Performance
         </span>
         <span className="text-[14px] font-medium text-[#999999]">
@@ -36,7 +36,7 @@ export default function BatchChartBox() {
                 style={{ backgroundColor: item.color }}
               ></span>
               <div className="flex flex-col items-start gap-0.5">
-                <span className="text-[15px] font-medium text-[#393D54] text-nowrap">
+                <span className="text-[15px] PoppinsBold font-medium text-[#393D54] text-nowrap">
                   {item.name}
                 </span>
                 <span className="text-xs font-medium text-[#BFBFBF]">

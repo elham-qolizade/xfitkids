@@ -62,7 +62,7 @@ export default function Home() {
               {letters.map((letter, i) => (
                 <motion.span
                   key={i}
-                  className="text-[#E5E5E5] text-7xl font-black"
+                  className="text-[#E5E5E5] PoppinsExtra text-7xl font-black"
                   variants={letterVariant}
                   exit={{ opacity: 0, x: -20, transition: { delay: i * exitStagger } }}
                 >
