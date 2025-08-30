@@ -33,32 +33,51 @@ export default function SideMenu() {
     { href: "/settings", label: "Settings", icon: SettingsIcon },
   ];
 
+  const activeIndex = links.findIndex((l) => l.href === pathname);
+
   return (
-    <div className="w-[250px] h-full sticky left-0 top-0 bg-[#0F296D] flex flex-col items-center gap-14">
+    <div className="w-[250px] h-full sticky left-0 top-0 bg-[#0F296D] flex flex-col items-center gap-6 pl-8">
       <div className="w-full flex items-end justify-center gap-2">
         <Image src={Logo} alt="Logo" width={40} height={40} className="mt-5" />
         <h2 className="font-extrabold text-[#F3F5FB]">XFIT KIDS</h2>
       </div>
-
-      <div className="w-full flex flex-col items-start pl-8 gap-2">
-        {links.map((link) => {
+      <div className="w-full flex flex-col items-start bg-[#F3F5FB] relative">
+        <div
+          className={`w-full h-[30px] bg-[#0F296D] ${
+            activeIndex === 0 ? "rounded-br-[30px]" : "rounded-br-0px"
+          }`}
+        ></div>
+        {links.map((link, index) => {
           const isActive = pathname === link.href;
           const Icon = link.icon;
+          const isPrev = index === activeIndex - 1;
+          const isNext = index === activeIndex + 1;
           return (
             <Link
               key={link.href}
               href={link.href}
-              className={`w-full flex items-center gap-2 pl-5 py-5 rounded-l-[30px] ${
+              className={`w-full z-10 flex items-center gap-2 pl-5 py-5 ${
                 isActive
-                  ? "text-[#0F296D] bg-[#F3F5FB]"
-                  : "text-white bg-transparent"
-              }`}
+                  ? "text-[#0F296D] bg-[#F3F5FB] rounded-l-[30px]"
+                  : "text-white bg-[#0F296D] rounded-l-0px"
+              }
+              ${isPrev ? "rounded-br-[30px]" : ""}
+              ${isNext ? "rounded-tr-[30px]" : ""}
+              `}
             >
               <Icon color={isActive ? "#0F296D" : "#FFFFFF"} size={20} />
               <span className="text-[15px] font-bold">{link.label}</span>
             </Link>
           );
         })}
+        <div className="absolute top-0 left-0 bottom-0 bg-[#0F296D] w-7 z-0"></div>
+        <div
+          className={`w-full h-[30px] bg-[#0F296D] ${
+            activeIndex === links.length - 1
+              ? "rounded-tr-[30px]"
+              : "rounded-tr-0px"
+          }`}
+        ></div>
       </div>
 
       <div className="w-fit flex flex-col items-center rounded-[28px] bg-white mt-7 mb-5 px-9 py-4 gap-3">
